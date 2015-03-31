@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="NoteWrangler">
 <head>
 	<meta charset="UTF-8">
 	<title>Note Wrangler</title>
@@ -7,10 +7,24 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-	<h1>Note Wrangler 1</h1>
-	<div>
-		
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-brand">
+				<a href="/">NoteWrangler</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/#/notes">Notes</a></li>
+				<li><a href="/#/users">Users</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- ng-view is an element directive -->
+	<div ng-view class="container-fluid">
 	</div>
+
+
+
 	<!-- 1. First let's go get our dependencies for the project. We'll need Bootstrap, jQuery, AngularJS ngRouter, and ngResource -->
 
 	<!-- 1.2 link to jQuery CDN -->
@@ -18,9 +32,10 @@
 
 	<!-- 1.3 links to AngularJS -->
 	<!-- These files were downloaded from http://code.angularjs.org/1.3.9/ -->
-	<script src="/assets/js/vendor/angular.min.js"></script>
-	<script src="/assets/js/vendor/angular-route.min.js"></script>
-	<script src="/assets/js/vendor/angular-resource.min.js"></script>
+	<script src="/assets/js/vendor/angular.js"></script>
+	<script src="/assets/js/vendor/angular-route.js"></script>
+	<script src="/assets/js/vendor/angular-resource.js"></script>
+	<script src="/assets/js/app.js" charset="utf-8"></script>
 
 </body>
 </html>
