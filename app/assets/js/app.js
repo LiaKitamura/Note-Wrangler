@@ -8,8 +8,14 @@
     // ngRoute gives us this routeProvider object
     .config(function($routeProvider){
       $routeProvider
-        .when('/notes', { templateUrl:'/assets/templates/pages/notes/index.html' }) // goes with ng-view in views/index.html
-        .when('/users', { templateUrl:'/assets/templates/pages/users/index.html' }) // now only need the one ng-view to render both pages
+        .when('/notes', {
+          templateUrl:'/assets/templates/pages/notes/index.html', // goes with ng-view in views/index.html
+          controller: 'NotesIndexController',
+          controllerAs: 'notes'
+        })
+        .when('/users', {
+          templateUrl:'/assets/templates/pages/users/index.html'
+        }) // now only need the one ng-view to render both pages
         .otherwise({redirectTo: '/notes'}); // usually redirects to a 404 page.
     });
 
