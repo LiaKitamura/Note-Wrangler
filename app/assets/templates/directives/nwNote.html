@@ -3,6 +3,6 @@
 <p><span class="label label-info">{{ note.category.name }}</span></p> -->
 
 <!-- made the child element have its own scope so we can remove note and just say the name -->
-<h2><a href="#">{{ title }}</a></h2>
+<h2><a ng-href="{{ link }}">{{ title }}</a></h2>
 <p>{{ description }}</p>
 <p><span class="label label-info">{{ category }}</span></p>

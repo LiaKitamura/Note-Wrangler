@@ -1,5 +1,6 @@
 angular.module('NoteWrangler')
-  .controller('NoteShowController', ['$http', '$scope', function($http, $scope){
+  .controller('NoteShowController',
+    ['$http', '$scope', '$routeParams', function($http, $scope, $routeParams){
     // var controller = this;
     // $http({ method: 'GET', url: '/notes'}).success(function(data){
     //   controller.notes = data;
@@ -12,7 +13,7 @@ angular.module('NoteWrangler')
     // });
 
     // with scope we don't even need to use this
-    $http.get('/notes').success(function(data){
+    $http.get('/notes/'+ $routeParams.id).success(function(data){
       $scope.data = data;
     });
 

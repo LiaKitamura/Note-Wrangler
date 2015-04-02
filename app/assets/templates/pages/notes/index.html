@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-md-6" ng-repeat="note in data">
     <!-- if we want this child to have its own scope -->
-    <nw-note title="note.title" description="note.description" category="{{note.category.name}}"></nw-note>
+    <nw-note title="note.title" link=" '/#/notes/'+ note.id" description="note.description" category="{{note.category.name}}"></nw-note>
 
     <!-- if this just inherited from the parent scope -->
     <!-- <nw-note></nw-note> -->
