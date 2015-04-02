@@ -3,11 +3,17 @@
 <div class="form-group">
   Search: <input type="text">
 </div>
-
+<!-- {{data}} -->
 <div class="row">
-  <div class="col-md-6">
-    <h2><a href="#">My note title</a></h2>
-    <p>This is the note description</p>
-    <p><span class="label label-info">category name</span></p>
+  <div class="col-md-6" ng-repeat="note in data">
+    <!-- if we want this child to have its own scope -->
+    <nw-note title="note.title" description="note.description" category="{{note.category.name}}"></nw-note>
+
+    <!-- if this just inherited from the parent scope -->
+    <!-- <nw-note></nw-note> -->
+
+    <!-- <h2><a href="#">{{ note.title }}</a></h2>
+    <p>{{ note.description }}</p>
+    <p><span class="label label-info">{{ note.category.name }}</span></p> -->
   </div>
 </div>
