@@ -11,7 +11,11 @@
         .when('/notes', {
           templateUrl:'/assets/templates/pages/notes/index.html', // goes with ng-view in views/index.html
           controller: 'NotesIndexController',
-          controllerAs: 'notes'
+          // controllerAs: 'notes' // we don't need this anymore since we are now using the $scope
+        })
+        .when('/notes/:id', { // the : means whatever comes after the colon is the variable route
+          templateUrl:'/assets/templates/pages/notes/show.html',
+          controller: 'NoteShowController',
         })
         .when('/users', {
           templateUrl:'/assets/templates/pages/users/index.html'
