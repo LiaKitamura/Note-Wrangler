@@ -6,6 +6,7 @@ angular.module('NoteWrangler')
       // if we want this child element to have its own scope
       scope: {
         title: '=', // this creates a two way binding (i.e data gets updated as it changes)
+        link: '=',
         description: '=',
         category: '@' // this will pass the data as a string
       }
