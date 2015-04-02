@@ -17,6 +17,10 @@
           templateUrl:'/assets/templates/pages/notes/show.html',
           controller: 'NoteShowController',
         })
+        .when('/notes/:id/edit', { // the : means whatever comes after the colon is the variable route
+          templateUrl:'/assets/templates/pages/notes/edit.html',
+          controller: 'NoteEditController',
+        })
         .when('/users', {
           templateUrl:'/assets/templates/pages/users/index.html'
         }) // now only need the one ng-view to render both pages
