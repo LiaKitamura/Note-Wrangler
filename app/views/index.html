@@ -7,17 +7,7 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-brand">
-				<a href="/">NoteWrangler</a>
-			</div>
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="/#/notes">Notes</a></li>
-				<li><a href="/#/users">Users</a></li>
-			</ul>
-		</div>
-	</nav>
+	<nw-main-nav></nw-main-nav>
 
 	<!-- ng-view is an element directive -->
 	<div ng-view class="container-fluid">
@@ -40,15 +30,17 @@
 	<!-- App -->
 	<script src="/assets/js/app.js" charset="utf-8"></script>
 
-	<!-- Controllers -->
+	<!-- Controllers --> <!-- everytime you create a new controller add file here -->
 	<script src="/assets/js/controllers/notesIndexController.js"></script>
 	<script src="/assets/js/controllers/noteShowController.js"></script>
 	<script src="/assets/js/controllers/noteEditController.js"></script>
+	<script src="/assets/js/controllers/noteCreateController.js"></script>
 
 	<!-- Directives -->
 	<script src="/assets/js/directives/nwNote.js"></script>
+	<script src="/assets/js/directives/nwMainNav.js"></script>
 
 	<!-- Services -->
-
+	<script src="/assets/js/services/note.js"></script>
 </body>
 </html>
