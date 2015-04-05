@@ -28,8 +28,12 @@
         })
         .when('/users', {
           templateUrl:'/assets/templates/pages/users/index.html',
-          controller: 'UsersIndexController'
+          controller: 'UsersIndexController',
         }) // now only need the one ng-view to render both pages
+        .when('/users/:id', {
+          templateUrl: '/assets/templates/pages/users/show.html',
+          controller: 'UserShowController'
+        })
         .otherwise({redirectTo: '/notes'}); // usually redirects to a 404 page.
     });
 
