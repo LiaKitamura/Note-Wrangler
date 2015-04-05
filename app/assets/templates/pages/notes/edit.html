@@ -1,5 +1,6 @@
 <div class="page-header">
-  <h1>Edit: {{ data.title }}</h1>
+  <h1 ng-show="isEdit">Edit: {{ data.title }}</h1>
+  <h1 ng-show="isNew">New Note</h1>
 </div>
 
 <form>
@@ -17,7 +18,7 @@
   <label>Content</label>
   <input class="form-control" type="text" ng-model="data.content">
 </form>
-<input ng-click="saveNote(data)" type="submit" value="Save" class="btn btn-default">
+<input ng-click="saveNote(data)" type="submit" value="{{ isSubmitting ? 'saving...' : 'Save' }}" ng-disabled="isSubmitting" class="btn btn-default">
 <!-- <small>{{ data.user.name }}</small>
 <p>{{ data.content }}</p>
 <a class="btn btn-primary" href="#">Edit</a>
