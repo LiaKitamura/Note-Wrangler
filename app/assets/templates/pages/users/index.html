@@ -1,1 +1,9 @@
 <h1>Users</h1>
+<div class="row">
+  <div ng-repeat="user in data">
+    <h3>{{ user.username }} <small>{{ user.name }}</small></h3>
+    <p>{{ user.bio }}</p>
+    <p>Twitter: {{ user.twitter_handle}}</p>
+    <p>Site: {{ user.site }}</p>
+  </div>
+</div>
