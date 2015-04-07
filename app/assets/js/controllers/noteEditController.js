@@ -2,7 +2,7 @@ angular.module('NoteWrangler')
   .controller('NoteEditController',
     ['Note', '$scope', '$routeParams', '$location',
       function(Note, $scope, $routeParams, $location){
-        $scope.isSubmitting = true;
+        $scope.isSubmitting = false;
         $scope.isEdit = true;
         // var controller = this;
         // $http({ method: 'GET', url: '/notes'}).success(function(data){
@@ -22,7 +22,7 @@ angular.module('NoteWrangler')
 
         $scope.data = Note.get({id: $routeParams.id})
 
-        $scope.saveNote = function(note){
+        $scope.saveNote = function(data){
           $scope.isSubmitting = true;
           // $http({ method: "PUT", url: '/notes/'+ note.id, data: note })
           //   .success(function(data){
@@ -32,7 +32,7 @@ angular.module('NoteWrangler')
           //     console.log("Error" + data);
           //     $scope.isSubmitting = false;
           //   });
-          note.$update();
+          data.$update();
           $location.path("/notes/"+note.id);
         }
 
