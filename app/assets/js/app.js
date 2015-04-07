@@ -30,9 +30,17 @@
           templateUrl:'/assets/templates/pages/users/index.html',
           controller: 'UsersIndexController',
         }) // now only need the one ng-view to render both pages
+        .when('/users/new', {
+          templateUrl:'/assets/templates/pages/users/edit.html',
+          controller: 'UserCreateController',
+        })
         .when('/users/:id', {
           templateUrl: '/assets/templates/pages/users/show.html',
-          controller: 'UserShowController'
+          controller: 'UserShowController',
+        })
+        .when('/users/:id/edit', {
+          templateUrl: '/assets/templates/pages/users/edit.html',
+          controller: 'UserEditController'
         })
         .otherwise({redirectTo: '/notes'}); // usually redirects to a 404 page.
     });
