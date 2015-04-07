@@ -1,7 +1,9 @@
 <div class="page-header">
-  <h2>{{ data.name }} <small>{{ data.username }}</small></h2>
+  <h2>{{ user.name }} <small>{{ user.username }}</small></h2>
 </div>
-<p>{{ data.bio }}</p>
-<p>Email: {{ data.email }}</p>
-<p>Site: {{ data.site }}</p>
-<p>Twitter: {{ data.twitter_handle }}</p>
+<p>{{ user.bio }}</p>
+<p>Email: {{ user.email }}</p>
+<p>Site: {{ user.site }}</p>
+<p>Twitter: {{ user.twitter_handle }}</p>
+<a class="btn btn-primary" ng-href="/#/users/{{ user.id }}/edit">Edit</a>
+<a class="btn btn-danger" ng-click="deleteUser(user)">Delete</a>
