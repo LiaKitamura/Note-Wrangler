@@ -1,6 +1,11 @@
-<h1>Users</h1>
+<h1>Users <a href="/#/users/new" class="btn btn-default">New User</a></h1>
+
+<div class="form-group">
+  Search: <input type="text">
+</div>
+
 <div class="row">
-  <div ng-repeat="user in data">
-    <h3><a ng-href="/#/users/{{user.id}}">{{ user.name }}</a></h3>
+  <div class="col-md-6" ng-repeat="user in users">
+    <nw-user name="user.name" link=" '/#/users/'+ user.id" site="user.site" twitter_handle="user.twitter_handle"></nw-user>
   </div>
 </div>
