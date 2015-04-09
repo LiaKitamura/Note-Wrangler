@@ -5,7 +5,7 @@
 </div>
 <!-- {{data}} -->
 <div class="row">
-  <div class="col-md-6" ng-repeat="note in data">
+  <div class="col-md-6" ng-repeat="note in notes">
     <!-- if we want this child to have its own scope -->
     <nw-note title="note.title" link=" '/#/notes/'+ note.id" description="note.description" category="{{note.category.name}}"></nw-note>
 

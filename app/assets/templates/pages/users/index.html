@@ -6,6 +6,6 @@
 
 <div class="row">
   <div class="col-md-6" ng-repeat="user in users">
-    <nw-user name="user.name" link=" '/#/users/'+ user.id" site="user.site" twitter_handle="user.twitter_handle"></nw-user>
+    <nw-note title="user.name" link=" '/#/users/'+ user.id" description="user.bio" category="{{user.twitter_handle}}"></nw-note>
   </div>
 </div>

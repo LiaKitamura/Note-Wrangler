@@ -1,35 +1,36 @@
 <div class="page-header">
-  <h1 ng-show="isEdit">Edit</h1>
+  <h1 ng-show="isEdit">Edit: {{ user.name }}</h1>
   <h1 ng-show="isNew">New User</h1>
 </div>
 <form>
-  <fieldset class="form-group"></fieldset>
-  <label>Name</label>
-  <input class="form-control" type="text" ng-model="data.name">
+  <fieldset class="form-group">
+    <label>Name</label>
+    <input class="form-control" type="text" ng-model="user.name">
+  </fieldset>
+
+  <fieldset class="form-group">
+    <label>Username</label>
+    <input class="form-control" type="text" ng-model="user.username">
+  </fieldset>
+
+  <fieldset class="form-group">
+    <label>email</label>
+    <input class="form-control" type="text" ng-model="user.email">
+  </fieldset>
+
+  <fieldset class="form-group">
+    <label>Bio</label>
+    <textarea class="form-control" ng-model="user.bio"></textarea>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <label>Twitter</label>
+    <input class="form-control" type="text" ng-model="user.twitter_handle">
+  </fieldset>
+
+  <fieldset class="form-group">
+    <label>Site</label>
+    <input class="form-control" type="text" ng-model="user.site">
+  </fieldset>
+  <input ng-click="saveUser(user)" type="submit" value="{{ isSubmitting ? 'saving...' : 'Save' }}" ng-disabled="isSubmitting" class="btn btn-default">
 </form>
-<form>
-  <fieldset class="form-group"></fieldset>
-  <label>Username</label>
-  <input class="form-control" type="text" ng-model="data.username">
-</form>
-<form>
-  <fieldset class="form-group"></fieldset>
-  <label>email</label>
-  <input class="form-control" type="text" ng-model="data.email">
-</form>
-<form>
-  <fieldset class="form-group"></fieldset>
-  <label>Bio</label>
-  <input class="form-control" type="text" ng-model="data.bio">
-</form>
-<form>
-  <fieldset class="form-group"></fieldset>
-  <label>Twitter</label>
-  <input class="form-control" type="text" ng-model="data.twitter_handle">
-</form>
-<form>
-  <fieldset class="form-group"></fieldset>
-  <label>Site</label>
-  <input class="form-control" type="text" ng-model="data.site">
-</form>
-<input ng-click="saveUser(data)" type="submit" value="{{ isSubmitting ? 'saving...' : 'Save' }}" ng-disabled="isSubmitting" class="btn btn-default">

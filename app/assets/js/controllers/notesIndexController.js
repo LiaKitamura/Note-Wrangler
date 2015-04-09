@@ -1,4 +1,4 @@
-angular.module('NoteWrangler').controller('NotesIndexController',['Note', '$scope',function(Note, $scope){
+angular.module('NoteWrangler').controller('NotesIndexController', ['Note', '$scope', function(Note, $scope){
   // var controller = this;
   // $http({ method: 'GET', url: '/notes'}).success(function(data){
   //   controller.notes = data;
@@ -21,8 +21,8 @@ angular.module('NoteWrangler').controller('NotesIndexController',['Note', '$scop
   // });
 
   // now that we are using $resource
-  $scope.data = Note.query();
-  
+  $scope.notes = Note.query();
+
 }]);
 
 // remember to add this script in the main index.html page

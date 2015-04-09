@@ -7,7 +7,7 @@ angular.module('NoteWrangler').controller('UserCreateController', ['User', '$sco
   $scope.saveUser = function(user){
     $scope.isSubmitting = true;
 
-    user.save();
+    user.$save();
     $scope.isSubmitting = false;
     $location.path("/users/"+user.id);
   }
